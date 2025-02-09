@@ -29,7 +29,7 @@ const products = [
 const ExclusiveProducts = () => {
   const [favorites, setFavorites] = useState([]);
 
-  // Toggle favorite status
+ 
   const toggleFavorite = (id) => {
     setFavorites((prev) =>
       prev.includes(id) ? prev.filter((fav) => fav !== id) : [...prev, id]
@@ -45,14 +45,14 @@ const ExclusiveProducts = () => {
             key={product.id}
             className="relative bg-white shadow-lg rounded-lg overflow-hidden group"
           >
-            {/* Product Image */}
+    
             <img
               src={product.image}
               alt={product.name}
               className="w-full h-48 object-cover"
             />
 
-            {/* Product Info */}
+      
             <div className="p-4 text-center">
               <h3 className="text-lg font-semibold text-gray-800">
                 {product.name}
@@ -60,7 +60,7 @@ const ExclusiveProducts = () => {
               <p className="text-gray-600">{product.price}</p>
             </div>
 
-            {/* Gradient Overlay on Hover */}
+          
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black/70 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <p className="text-sm text-white mb-4 text-center">
                 High-quality fabric with a stylish design.
