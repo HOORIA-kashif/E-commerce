@@ -20,7 +20,7 @@ const cartSlice = createSlice({
       state.cartItems = state.cartItems.filter(item => item.id !== action.payload);
     },
     clearCart: (state) => {
-      state.cartItems = []; // 🔥 Yeh line ensure karo ke properly likhi ho!
+      state.cartItems = []; 
     },
   },
 });
