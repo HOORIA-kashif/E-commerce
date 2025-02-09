@@ -2,7 +2,7 @@ import React from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
-// Fix for marker icons
+
 import L from "leaflet";
 import markerIcon from "leaflet/dist/images/marker-icon.png";
 import markerShadow from "leaflet/dist/images/marker-shadow.png";
@@ -14,7 +14,7 @@ let DefaultIcon = L.icon({
 L.Marker.prototype.options.icon = DefaultIcon;
 
 const MapSection = () => {
-  // Example markers for countries
+
   const locations = [
     { id: 1, name: "United States", lat: 37.0902, lng: -95.7129 },
     { id: 2, name: "India", lat: 20.5937, lng: 78.9629 },
@@ -29,17 +29,17 @@ const MapSection = () => {
       </h2>
       <div className="h-96">
         <MapContainer
-          center={[20, 0]} // Center of the map
+          center={[20, 0]} 
           zoom={2}
           style={{ height: "100%", width: "100%" }}
         >
-          {/* Base Layer */}
+        
           <TileLayer
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           />
 
-          {/* Markers */}
+       
           {locations.map((location) => (
             <Marker key={location.id} position={[location.lat, location.lng]}>
               <Popup>{location.name}</Popup>
