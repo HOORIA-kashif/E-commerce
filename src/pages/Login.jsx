@@ -13,7 +13,7 @@ const Login = () => {
   const handleLogin = (e) => {
     e.preventDefault();
 
-    // 🔹 Dummy User Credentials
+ 
     const dummyUser = {
       email: "test@example.com",
       password: "123456",
@@ -21,10 +21,10 @@ const Login = () => {
     };
 
     if (email === dummyUser.email && password === dummyUser.password) {
-      dispatch(login({ name: dummyUser.name, email: dummyUser.email })); // Redux mein user set karo
-      navigate("/"); // Home page pe redirect karo
+      dispatch(login({ name: dummyUser.name, email: dummyUser.email })); 
+      navigate("/"); 
     } else {
-      setError("Invalid email or password"); // Agar credentials wrong hain to error show karo
+      setError("Invalid email or password"); 
     }
   };
 
