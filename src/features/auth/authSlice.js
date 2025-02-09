@@ -1,10 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-// LocalStorage se user state uthana
+
 const user = JSON.parse(localStorage.getItem("user"));
 
 const initialState = {
-  user: user || null, // Agar user logged in hai to state maintain rahe
+  user: user || null, 
 };
 
 const authSlice = createSlice({
@@ -17,7 +17,7 @@ const authSlice = createSlice({
     },
     logout: (state) => {
       state.user = null;
-      localStorage.removeItem("user"); // LocalStorage se hatao
+      localStorage.removeItem("user"); 
     },
   },
 });
