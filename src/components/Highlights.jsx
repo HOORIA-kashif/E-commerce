@@ -7,7 +7,7 @@ import image17 from "../assets/womens/hoodies.png"
 function CircleImagesSection() {
   return (
     <div className="flex flex-col md:flex-row items-center justify-between px-8 md:px-20 py-12 bg-gray-100 rounded-lg">
-      {/* Left Side: Circles with Images */}
+     
       <div className="flex space-x-6 mb-6 md:mb-0">
         <div className="w-20 h-20 rounded-full bg-white shadow-md flex items-center justify-center">
           <img
@@ -40,7 +40,7 @@ function CircleImagesSection() {
         </div>
       </div>
 
-      {/* Right Side: Text Content */}
+     
       <div className="text-center md:text-left">
         <h3 className="text-lg font-bold text-gray-800 mb-2">
           Quality Product
