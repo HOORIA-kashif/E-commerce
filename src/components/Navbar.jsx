@@ -14,26 +14,24 @@ import {
 const Navbar = () => {
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart.cartItems);
-  const user = useSelector((state) => state.auth.user); // Redux se user state
-
-  // 🛒 Total Quantity Count Calculation (Reduce Function)
+  const user = useSelector((state) => state.auth.user); 
   const totalQuantity = cartItems.reduce((total, item) => total + item.quantity, 0);
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isSearchOpen, setSearchOpen] = useState(false);
   return (
     <>
-      {/* Main Header */}
+   
       <header className="bg-white shadow-md sticky top-0 z-50">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           
-          {/* Left: Brand Name */}
+         
           <div className="text-2xl font-bold">
             <Link to="/" className="text-gray-800 hover:text-gray-600">
               Heavenly
             </Link>
           </div>
 
-          {/* Desktop View: Links */}
+        
           <nav className="hidden md:flex space-x-6">
             {["Women", "Men", "Kids", "Sale"].map((item) => (
               <NavLink
@@ -50,9 +48,9 @@ const Navbar = () => {
             ))}
           </nav>
 
-          {/* Center: Icons */}
+      
           <div className="flex items-center space-x-6">
-            {/* Search Button */}
+            
             <button
               onClick={() => setSearchOpen(true)}
               className="text-gray-700 hover:text-gray-900"
@@ -72,7 +70,7 @@ const Navbar = () => {
           )}
           
             </Link>
-           {/* User Icon: Show Login or Logout Based on Authentication */}
+          
            {user ? (
               <div className="flex items-center space-x-4">
                 <span className="text-gray-700 font-semibold">{user.name}</span>
@@ -88,7 +86,7 @@ const Navbar = () => {
               </Link>
             )}
           </div>
-          {/* Mobile View: Menu Icon */}
+          
           <button
             onClick={() => setMenuOpen(!isMenuOpen)}
             className="md:hidden text-gray-700 hover:text-gray-900 focus:outline-none"
@@ -97,7 +95,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile Menu (Dropdown) */}
+       
         {isMenuOpen && (
           <div className="md:hidden bg-gray-100 px-6 py-4">
             <nav className="space-y-4">
@@ -121,7 +119,7 @@ const Navbar = () => {
         )}
       </header>
 
-      {/* Fullscreen Search Overlay with Blur Effect */}
+    
       {isSearchOpen && (
         <div className="fixed inset-0  backdrop-blur-sm flex flex-col items-center justify-center z-50">
           <button
