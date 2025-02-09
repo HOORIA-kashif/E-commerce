@@ -7,7 +7,7 @@ import image3 from "../assets/womens/banner1.jpg"
 const banners = [
   {
     id: 1,
-    image: image1, // Replace with actual image path
+    image: image1, 
     title: (
       <>
         Use Fashion Into <br /> Your All Collection
@@ -18,7 +18,7 @@ const banners = [
   },
   {
     id: 2,
-    image: image2, // Replace with actual image path
+    image: image2, 
     title:(
       <>
       Style That Speaks <br/> Your Personality
@@ -31,7 +31,7 @@ const banners = [
   },
   {
     id: 3,
-    image: image3, // Replace with actual image path
+    image: image3, 
     title:(
       <>
       Step Into Comfort  <br />and Elegance
