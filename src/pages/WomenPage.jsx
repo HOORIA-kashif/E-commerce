@@ -3,7 +3,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import { useDispatch } from "react-redux";
-import { addToCart } from "../features/cart/cartSlice"; // Import addToCart action
+import { addToCart } from "../features/cart/cartSlice"; 
 import { Link } from "react-router-dom";
 import image1 from "../assets/womens/1.webp";
 import image2 from "../assets/womens/6.jpg";
@@ -25,11 +25,11 @@ const WomenTopsPage = () => {
 
   
 const handleAddToCart = (product) => {
-  dispatch(addToCart(product)); // 🛒 Redux store mein item add karo
+  dispatch(addToCart(product)); 
   
-  toast.success(`${product.name} added to cart!`, { // 🔔 Notification show karo
+  toast.success(`${product.name} added to cart!`, { 
     position: "top-right",
-    autoClose: 3000, // 2 sec baad auto close hoga
+    autoClose: 3000, 
     hideProgressBar: false,
     closeOnClick: true,
     pauseOnHover: true,
@@ -95,7 +95,7 @@ const handleAddToCart = (product) => {
 
   return (
     <div className="bg-gray-100 min-h-screen">
-        <ToastContainer /> {/* ✅ Add this here */}
+        <ToastContainer /> 
       <div className="bg-white py-8 shadow-sm">
         <div className="container mx-auto px-6">
           <h1 className="text-4xl font-bold text-gray-800">{getHeading()}</h1>
@@ -185,7 +185,7 @@ const handleAddToCart = (product) => {
                   )}
                   <span className="text-red-500 font-bold">{product.price}</span>
                 </div>
-                {/* Add to Cart Button */}
+             
                 <button
                 onClick={() => handleAddToCart(product)}
                   className="mt-3 w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
