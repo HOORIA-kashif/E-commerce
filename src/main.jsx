@@ -4,9 +4,9 @@ import React from 'react';
 import './index.css';
 import App from './App.jsx';
 
-// Redux Provider اور store کو شامل کریں
+
 import { Provider } from 'react-redux';
-import { store } from './app/store'; // آپ کے store کا راستہ
+import { store } from './app/store'; 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
