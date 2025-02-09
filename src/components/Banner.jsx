@@ -47,22 +47,22 @@ const banners = [
 const Banner = () => {
   const [currentBanner, setCurrentBanner] = useState(0);
 
-  // Automatically change banners every 5 seconds
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentBanner((prev) => (prev + 1) % banners.length);
-    }, 2000); // Change image every 2 seconds
+    }, 2000); 
     return () => clearInterval(interval);
   }, []);
 
-  // Manually switch slides on dot click
+ 
   const handleDotClick = (index) => {
     setCurrentBanner(index);
   };
 
   return (
     <div className="relative h-[500px] overflow-hidden">
-      {/* Banner Content with Framer Motion */}
+      {/* Banner Content  */}
       <AnimatePresence>
         {banners.map((banner, index) =>
           index === currentBanner ? (
