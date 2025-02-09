@@ -5,9 +5,9 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-gray-300 py-10">
       <div className="container mx-auto px-8 md:px-20">
-        {/* Top Section */}
+   
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* About Section */}
+       
           <div>
             <h3 className="text-lg font-semibold text-white mb-4">About Us</h3>
             <p className="text-sm">
@@ -16,7 +16,7 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Quick Links */}
+      
           <div>
             <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
             <ul className="space-y-2">
@@ -55,7 +55,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact Info */}
+        
           <div>
             <h3 className="text-lg font-semibold text-white mb-4">Contact Us</h3>
             <p className="text-sm">123 Street Name, City, Country</p>
@@ -63,7 +63,7 @@ const Footer = () => {
             <p className="text-sm mt-2">Phone: +123 456 7890</p>
           </div>
 
-          {/* Newsletter */}
+      
           <div>
             <h3 className="text-lg font-semibold text-white mb-4">
               Subscribe to Our Newsletter
@@ -84,10 +84,10 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Divider */}
+   
         <div className="border-t border-gray-700 my-8"></div>
 
-        {/* Bottom Section */}
+    
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm">© 2025 Trend. All Rights Reserved.</p>
           <div className="flex space-x-4 mt-4 md:mt-0">
